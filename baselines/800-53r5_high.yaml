@@ -7,6 +7,7 @@ authors: |
   |Dan Brodjieski|National Aeronautics and Space Administration
   |Allen Golbig|Jamf
   |===
+parent_values: recommended
 profile:
   - section: "authentication"
     rules:
@@ -94,7 +95,6 @@ profile:
       - os_sshd_permit_root_login_configure
       - os_sudo_timeout_configure
       - os_sudoers_timestamp_type_configure
-      - os_sudoers_tty_configure
       - os_system_read_only
       - os_tftpd_disable
       - os_time_server_enabled
@@ -103,13 +103,13 @@ profile:
       - os_uucp_disable
   - section: "passwordpolicy"
     rules:
-      - pwpolicy_60_day_enforce
       - pwpolicy_account_inactivity_enforce
       - pwpolicy_account_lockout_enforce
       - pwpolicy_account_lockout_timeout_enforce
       - pwpolicy_alpha_numeric_enforce
       - pwpolicy_history_enforce
       - pwpolicy_lower_case_character_enforce
+      - pwpolicy_max_lifetime_enforce
       - pwpolicy_minimum_length_enforce
       - pwpolicy_minimum_lifetime_enforce
       - pwpolicy_simple_sequence_disable

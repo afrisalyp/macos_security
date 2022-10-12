@@ -13,7 +13,7 @@ result:
 fix: |
   [source,bash]
   ----
-  /usr/sbin/spctl --master-enable
+  /usr/sbin/spctl --global-enable
   ----
 references:
   cce:
@@ -39,7 +39,7 @@ references:
     - 3.4.5
   cis:
     benchmark:
-      - 2.5.2.1 (level 1)
+      - 2.5.7 (level 1)
     controls v8:
       - 10.1
       - 10.2
